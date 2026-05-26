@@ -3,15 +3,18 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="theme-color" content="#FFF4EE" />
   <title>DayZero — Support</title>
   <style>
-    body { background: #0d0f14; color: #d4cfc8; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; padding: 60px 20px; text-align: center; font-size: 14px; }
-    a { color: rgba(200,149,106,0.9); text-decoration: none; padding: 0 8px; }
+    body {
+      background: #FFF4EE; color: #5D5D5D;
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+      padding: 60px 20px; text-align: center; font-size: 14px;
+    }
+    a { color: #FF5E5B; text-decoration: none; padding: 0 8px; font-weight: 600; }
     a:hover { text-decoration: underline; }
   </style>
   <script>
-    // Auto-redirect to the support page in the visitor's browser language.
-    // Falls back to English when the locale isn't one of the five supported.
     var lang = (navigator.language || 'en').slice(0, 2).toLowerCase();
     var supported = ['en', 'it', 'de', 'fr', 'es'];
     var target = supported.indexOf(lang) >= 0 ? lang : 'en';

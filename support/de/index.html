@@ -3,57 +3,68 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="theme-color" content="#FFF4EE" />
   <title>DayZero — Unterstützen</title>
+  <link rel="preconnect" href="https://ko-fi.com" />
   <style>
-    * { box-sizing: border-box; margin: 0; padding: 0; }
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    html, body { height: 100%; }
     body {
-      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif;
-      background: #0d0f14;
-      color: #d4cfc8;
-      line-height: 1.7;
-      padding: 40px 20px 80px;
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+      background: #FFF4EE; color: #2C2C2C; line-height: 1.6;
+      -webkit-font-smoothing: antialiased;
+      display: flex; align-items: center; justify-content: center;
+      padding: 32px 20px;
     }
-    .container { max-width: 680px; margin: 0 auto; }
-    .logo {
-      font-size: 13px; font-weight: 700; letter-spacing: 2.5px;
-      text-transform: uppercase; color: rgba(200,149,106,0.7);
-      margin-bottom: 40px;
+    .card {
+      width: 100%; max-width: 480px; background: #FFFFFF;
+      border-radius: 20px; padding: 40px 32px 32px;
+      box-shadow: 0 8px 32px rgba(255, 94, 91, 0.08), 0 2px 8px rgba(0,0,0,0.04);
+      text-align: center;
     }
-    h1 { font-size: 28px; font-weight: 800; color: #f0ebe4; margin-bottom: 24px; letter-spacing: -0.5px; }
-    p { font-size: 15px; color: rgba(212,207,200,0.75); margin-bottom: 18px; }
-    p.lead { color: #f0ebe4; font-weight: 600; font-size: 16px; }
+    .wordmark { font-size: 11px; font-weight: 700; letter-spacing: 3px; text-transform: uppercase; color: #C8956A; margin-bottom: 28px; }
+    .hero-emoji { font-size: 56px; line-height: 1; margin-bottom: 20px; }
+    h1 { font-size: 24px; font-weight: 700; color: #1F1F1F; margin-bottom: 14px; letter-spacing: -0.3px; }
+    .lead { font-size: 16px; color: #4A4A4A; margin-bottom: 22px; font-weight: 500; }
+    p { font-size: 14.5px; color: #5D5D5D; margin-bottom: 18px; }
     .cta {
-      display: inline-block; background: #C8956A; color: #0d0f14;
-      text-decoration: none; padding: 14px 28px; border-radius: 8px;
-      font-weight: 700; font-size: 15px; margin: 16px 0 32px;
-      transition: background 0.15s ease;
+      display: inline-flex; align-items: center; justify-content: center; gap: 8px;
+      background: #FF5E5B; color: #FFFFFF; text-decoration: none;
+      padding: 14px 28px; border-radius: 12px; font-weight: 700; font-size: 15px;
+      margin: 14px 0 8px;
+      box-shadow: 0 4px 14px rgba(255, 94, 91, 0.35);
+      transition: transform 0.12s ease, box-shadow 0.15s ease, background 0.15s ease;
     }
-    .cta:hover { background: #d8a47b; text-decoration: none; }
-    .footer-note { font-size: 13px; color: rgba(212,207,200,0.5); font-style: italic; margin-top: 24px; }
-    .langs {
-      font-size: 12px; color: rgba(212,207,200,0.4);
-      margin-top: 56px; padding-top: 20px;
-      border-top: 1px solid rgba(212,207,200,0.08); text-align: center;
-    }
-    .langs a { color: rgba(212,207,200,0.55); text-decoration: none; padding: 0 8px; }
-    .langs a:hover { color: rgba(200,149,106,0.95); }
-    footer {
-      margin-top: 32px; font-size: 12px;
-      color: rgba(212,207,200,0.3); text-align: center;
+    .cta:hover { background: #E84E4A; transform: translateY(-1px); box-shadow: 0 6px 20px rgba(255, 94, 91, 0.45); }
+    .cta:active { transform: translateY(0); }
+    .cta-sub { font-size: 12.5px; color: #999; margin-top: 4px; margin-bottom: 24px; }
+    .footer-note { font-size: 13px; color: #888; font-style: italic; margin-top: 8px; padding-top: 20px; border-top: 1px solid #F2E8DF; }
+    .langs { font-size: 12px; color: #BBB; margin-top: 28px; }
+    .langs a { color: #999; text-decoration: none; padding: 0 6px; transition: color 0.12s ease; }
+    .langs a:hover { color: #FF5E5B; }
+    footer { margin-top: 24px; font-size: 11px; color: rgba(0,0,0,0.25); text-align: center; }
+    @media (max-width: 420px) {
+      .card { padding: 32px 22px 26px; border-radius: 16px; }
+      h1 { font-size: 22px; }
+      .hero-emoji { font-size: 48px; }
     }
   </style>
 </head>
 <body>
-  <div class="container">
-    <div class="logo">DayZero</div>
-
-    <h1>DayZero unterstützen</h1>
+  <main class="card">
+    <div class="wordmark">DayZero</div>
+    <div class="hero-emoji">☕</div>
+    <h1>Spendier mir einen Kaffee</h1>
 
     <p class="lead">DayZero ist für alle kostenlos. Für immer.</p>
-    <p>Keine Werbung, kein Tracking, keine Pro-Version. Deine Daten bleiben auf deinem Gerät.</p>
-    <p>Wenn die App dir geholfen hat und du das Projekt unterstützen möchtest, kannst du auf Ko-fi einen kleinen Beitrag hinterlassen. Das deckt die Entwickler-Gebühren (Apple, Google, Domain) und hilft mir, weiter zu bauen.</p>
+    <p>Keine Werbung, kein Tracking, keine Pro-Stufe. Deine Daten bleiben auf deinem Gerät.</p>
+    <p>Wenn die App dir geholfen hat und du das, was ich baue, unterstützen willst, hinterlass eine Spende auf Ko-fi. Sie deckt die Entwicklergebühren und hält das Projekt am Laufen.</p>
 
-    <a class="cta" href="https://ko-fi.com/dayzerosupport">→ Auf Ko-fi unterstützen</a>
+    <a class="cta" href="https://ko-fi.com/dayzerosupport" rel="noopener">
+      <span>☕</span>
+      <span>Auf Ko-fi unterstützen</span>
+    </a>
+    <div class="cta-sub">Sichere Zahlung über Ko-fi · PayPal oder Karte</div>
 
     <p class="footer-note">Alle Funktionen bleiben kostenlos, immer. Danke, dass du hier bist.</p>
 
@@ -66,6 +77,6 @@
     </p>
 
     <footer>&copy; 2026 DayZero</footer>
-  </div>
+  </main>
 </body>
 </html>
